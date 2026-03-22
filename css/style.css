@@ -307,8 +307,12 @@ p { font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; }
 
 .mobile-menu.open { clip-path: inset(0 0 0% 0); }
 
+.mobile-menu__header {
+  position: absolute; top: 24px; left: 10vw; right: 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
 .mobile-menu__close {
-  position: absolute; top: 24px; right: 24px;
   background: none; border: none;
   color: var(--fg-3); font-size: 1.2rem; cursor: none;
   transition: color 0.2s ease;
@@ -378,14 +382,18 @@ p { font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; }
   100% { top: 100%; opacity: 0; }
 }
 
-.hero__bg-word {
-  position: absolute; bottom: -0.15em; right: -0.05em;
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(200px, 30vw, 420px);
-  line-height: 1; color: transparent;
-  -webkit-text-stroke: 0.5px rgba(245,244,240,0.04);
-  pointer-events: none; user-select: none;
-  z-index: 1; will-change: transform;
+/* Hero bg logo watermark */
+.hero__bg-logo {
+  position: absolute;
+  bottom: -4%; right: -3%;
+  width: clamp(280px, 38vw, 520px);
+  z-index: 1; pointer-events: none; user-select: none;
+  opacity: 0.06; will-change: transform;
+}
+
+.hero__bg-logo img {
+  width: 100%; height: auto;
+  mix-blend-mode: screen;
 }
 
 .hero__status {
@@ -727,6 +735,19 @@ p { font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; }
 .cta__headline {
   font-size: clamp(3.5rem, 9vw, 9rem);
   color: #f5f4f0; margin-bottom: 28px;
+}
+
+/* CTA logo above headline */
+.cta__logo {
+  margin-bottom: 36px;
+}
+
+.cta__logo img {
+  height: 64px;
+  width: auto;
+  margin: 0 auto;
+  mix-blend-mode: screen;
+  opacity: 0.65;
 }
 
 .cta__sub {

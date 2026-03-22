@@ -114,7 +114,7 @@
   const heroCta       = document.getElementById('hero-cta');
   const heroRule      = document.getElementById('hero-rule');
   const heroScrollHint = document.querySelector('.hero__scroll-hint');
-  const heroBgWord    = document.querySelector('.hero__bg-word');
+  const heroBgWord    = document.querySelector('.hero__bg-logo');
   const heroCursorEl  = document.querySelector('.hero__cursor');
   const heroStatusEl  = document.querySelector('.hero__status');
 
