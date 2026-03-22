@@ -86,6 +86,24 @@ h1, h2, h3 {
 
 p { font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; }
 
+/* ── Logo ─────────────────────────────────────────────────── */
+.logo {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
+.logo--sm { height: 26px; }
+
+/* Dark logo: remove black bg via screen blend on dark surfaces */
+.logo--dark  { mix-blend-mode: screen; }
+
+/* Light logo: remove white bg via multiply blend on light surfaces */
+.logo--light { mix-blend-mode: multiply; display: none; }
+
+[data-theme="light"] .logo--dark  { display: none; }
+[data-theme="light"] .logo--light { display: block; }
+
 /* ── Line mask ────────────────────────────────────────────── */
 .lm { display: block; overflow: hidden; padding-bottom: 0.06em; }
 .lm__i { display: block; transform: translateY(110%); will-change: transform; }
