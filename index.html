@@ -268,8 +268,42 @@
         <span class="lm"><span class="lm__i">Ready to run</span></span>
         <span class="lm lm--italic"><span class="lm__i">smarter?</span></span>
       </h2>
-      <p class="cta__sub" data-anim>Book a free 30-minute discovery call. No pressure — just a conversation about what AI could do for your business.</p>
-      <a href="#contact" class="btn btn--outline hoverable" data-anim>Book a free discovery call →</a>
+
+      <div class="cta__body" data-anim>
+        <!-- Left: subtext -->
+        <div class="cta__body-left">
+          <p class="cta__sub">Book a free 30-minute discovery call. No pressure — just a conversation about what AI could do for your business.</p>
+        </div>
+
+        <!-- Right: contact form -->
+        <div class="cta__body-right">
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/PLACEHOLDER" method="POST" novalidate>
+            <div class="cf__field">
+              <label class="cf__label" for="cf-name">Name</label>
+              <input class="cf__input" id="cf-name" type="text" name="name" required autocomplete="name">
+            </div>
+            <div class="cf__field">
+              <label class="cf__label" for="cf-business">Business name</label>
+              <input class="cf__input" id="cf-business" type="text" name="business" required autocomplete="organization">
+            </div>
+            <div class="cf__field">
+              <label class="cf__label" for="cf-email">Email</label>
+              <input class="cf__input" id="cf-email" type="email" name="email" required autocomplete="email">
+            </div>
+            <div class="cf__field">
+              <label class="cf__label" for="cf-challenge">What's your biggest operational challenge right now?</label>
+              <textarea class="cf__input cf__textarea" id="cf-challenge" name="challenge" rows="4" required></textarea>
+            </div>
+            <p class="cf__error" id="cf-error" aria-live="polite"></p>
+            <button type="submit" class="btn btn--outline cf__submit hoverable">Send message →</button>
+          </form>
+
+          <div class="cf__success" id="cf-success" aria-live="polite" hidden>
+            <p class="cf__success-msg">Message received. We'll be in touch shortly.</p>
+            <a href="https://calendly.com/PLACEHOLDER" target="_blank" rel="noopener" class="btn btn--outline hoverable">Book your discovery call →</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

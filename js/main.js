@@ -269,6 +269,45 @@
   });
 
   /* ============================================================
+     CONTACT FORM — Formspree async submit
+  ============================================================ */
+  const contactForm = document.getElementById('contact-form');
+  const cfSuccess   = document.getElementById('cf-success');
+  const cfError     = document.getElementById('cf-error');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      cfError.textContent = '';
+      const btn = contactForm.querySelector('.cf__submit');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          contactForm.hidden = true;
+          cfSuccess.hidden = false;
+        } else {
+          const data = await res.json().catch(() => ({}));
+          cfError.textContent = data.errors?.[0]?.message || 'Something went wrong. Please try again.';
+          btn.textContent = 'Send message →';
+          btn.disabled = false;
+        }
+      } catch {
+        cfError.textContent = 'Network error. Please check your connection and try again.';
+        btn.textContent = 'Send message →';
+        btn.disabled = false;
+      }
+    });
+  }
+
+  /* ============================================================
      RESIZE
   ============================================================ */
   let resizeTimer;
