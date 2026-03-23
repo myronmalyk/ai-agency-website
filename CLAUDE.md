@@ -38,9 +38,19 @@ Theme is toggled in JS and persisted to `localStorage` under key `ma-theme`. The
 
 ### Logos
 
-Two logo images in `images/` — one for each theme. Switching is CSS-only via blend modes:
-- Dark theme: `.logo--dark` visible, `mix-blend-mode: screen` (removes black background)
-- Light theme: `.logo--light` visible, `mix-blend-mode: multiply` (removes white background)
+Four logo images in `images/logo/`:
+- `logo_black.png` — icon only, black bg → dark theme (screen removes black bg)
+- `logo_white.png` — icon only, white bg → light theme (multiply removes white bg)
+- `logo_text_black.png` — icon + wordmark, black bg → dark theme nav only
+- `logo_text_white.png` — icon + wordmark, white bg → light theme nav only
+
+**Nav uses text logos** (`logo_text_*`). **Everywhere else** uses icon-only logos (`logo_*`).
+
+Switching is CSS-only via blend modes:
+- Dark theme: `.logo--dark` visible, `mix-blend-mode: screen` (removes black background) → use `logo_black` / `logo_text_black`
+- Light theme: `.logo--light` visible, `mix-blend-mode: multiply` (removes white background) → use `logo_white` / `logo_text_white`
+
+Favicon: `images/logo/logo_white.png`
 
 ### Animations
 
@@ -66,6 +76,18 @@ Two logo images in `images/` — one for each theme. Switching is CSS-only via b
 ## Nav
 
 Floating iOS-style frosted glass pill: `position: fixed`, centered via `left: 50%; transform: translateX(-50%)`, `border-radius: 16px`, `backdrop-filter: blur(24px) saturate(180%)`. Everything except the logo lives in `.nav__right` (`margin-left: auto`). On mobile (≤768px), `.nav__right` is hidden and a hamburger menu takes over.
+
+## Contact form
+
+- Formspree endpoint: `https://formspree.io/f/xvzwezll` ✅
+- Calendly URL: `https://calendly.com/myronmalyk/30min` ✅
+- Email validation runs client-side before fetch; shows error in `.cf__error` if empty/invalid
+- Button reset handled in `finally` block in `main.js` — always resets unless form was hidden on success
+
+## Branding
+
+- Agency name: **Tyvelo**
+- Contact email: hello@tyvelo.com
 
 ## GitHub
 
