@@ -279,6 +279,14 @@
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
       cfError.textContent = '';
+
+      const emailInput = document.getElementById('cf-email');
+      if (!emailInput.value.trim() || !emailInput.validity.valid) {
+        cfError.textContent = 'Please enter a valid email address.';
+        emailInput.focus();
+        return;
+      }
+
       const btn = contactForm.querySelector('.cf__submit');
       btn.textContent = 'Sending…';
       btn.disabled = true;
@@ -296,13 +304,14 @@
         } else {
           const data = await res.json().catch(() => ({}));
           cfError.textContent = data.errors?.[0]?.message || 'Something went wrong. Please try again.';
-          btn.textContent = 'Send message →';
-          btn.disabled = false;
         }
       } catch {
         cfError.textContent = 'Network error. Please check your connection and try again.';
-        btn.textContent = 'Send message →';
-        btn.disabled = false;
+      } finally {
+        if (!contactForm.hidden) {
+          btn.textContent = 'Send message →';
+          btn.disabled = false;
+        }
       }
     });
   }
