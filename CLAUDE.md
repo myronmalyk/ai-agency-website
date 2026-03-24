@@ -87,7 +87,8 @@ Floating iOS-style frosted glass pill: `position: fixed`, centered via `left: 50
 ## Branding
 
 - Agency name: **Tyvelo**
-- Contact email: hello@tyvelo.com
+- Contact email: myronmalyk@gmail.com
+- LinkedIn: https://linkedin.com/company/tyvelo
 
 ## GitHub
 
