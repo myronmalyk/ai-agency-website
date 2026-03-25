@@ -90,6 +90,11 @@ Floating iOS-style frosted glass pill: `position: fixed`, centered via `left: 50
 - Contact email: myronmalyk@gmail.com
 - LinkedIn: https://linkedin.com/company/tyvelo
 
+## Vercel
+
+- Analytics: `/_vercel/insights/script.js` (loaded in `<head>`)
+- Speed Insights: `/_vercel/speed-insights/script.js` (loaded in `<head>`)
+
 ## GitHub
 
 Remote: `https://github.com/myronmalyk/ai-agency-website`
