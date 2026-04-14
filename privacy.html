@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy — Tyvelo AI Automation Agency" />
+  <title>Privacy Policy — Tyvelo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/logo/logo_white.png" />
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #131313;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #e8e8e8;
+      --text-dim: rgba(232, 232, 232, 0.45);
+      --accent: #8B9DFF;
+      --accent-dim: rgba(139, 157, 255, 0.12);
+      --font-serif: 'DM Serif Display', Georgia, serif;
+      --font-sans: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ─────────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      width: calc(100% - 40px);
+      max-width: 900px;
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background: rgba(10, 10, 10, 0.72);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 10px;
+    }
+
+    .nav__logo img {
+      height: 28px;
+      mix-blend-mode: screen;
+    }
+
+    .nav__back {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav__back:hover { color: var(--accent); }
+
+    /* ── LAYOUT ──────────────────────────────────────────────── */
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 140px 24px 100px;
+    }
+
+    /* ── HEADER ──────────────────────────────────────────────── */
+    .page-header {
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .page-meta {
+      font-size: 14px;
+      color: var(--text-dim);
+    }
+
+    /* ── CONTENT ─────────────────────────────────────────────── */
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section__number {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 400;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .section p {
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0;
+    }
+
+    .section ul li {
+      font-size: 15px;
+      line-height: 1.75;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      color: var(--text);
+    }
+
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 48px 0;
+    }
+
+    /* ── CALLOUT ─────────────────────────────────────────────── */
+    .callout {
+      background: var(--accent-dim);
+      border: 1px solid rgba(139, 157, 255, 0.2);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .callout p {
+      font-size: 14px;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .callout strong {
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    /* ── CONTACT CARD ────────────────────────────────────────── */
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-top: 20px;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+    }
+
+    .contact-card p:last-child { margin-bottom: 0; }
+
+    .contact-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 15px;
+      font-family: var(--font-mono);
+    }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    .footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer p {
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    .footer a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .footer a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .page { padding: 120px 20px 80px; }
+      .footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ─────────────────────────────────────────── -->
+  <nav class="nav" role="navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Tyvelo home">
+        <img src="images/logo/logo_text_black.png" alt="Tyvelo" />
+      </a>
+      <a href="/" class="nav__back">← Back to home</a>
+    </div>
+  </nav>
+
+  <!-- ── CONTENT ──────────────────────────────────────── -->
+  <main class="page">
+
+    <header class="page-header">
+      <span class="page-label">// Legal</span>
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="page-meta">Last updated: April 2026 &nbsp;·&nbsp; Tyvelo — BC, Canada</p>
+    </header>
+
+    <div class="section">
+      <p>This Privacy Policy explains how <strong>Tyvelo</strong> ("we", "us", or "our") collects, uses, and protects data when you use our AI automation services. We keep this short and plain — no legal jargon.</p>
+      <p>By using our services, you agree to the practices described here. If you have questions, email us at <a href="mailto:myronmalyk@gmail.com" style="color: var(--accent); text-decoration: none;">myronmalyk@gmail.com</a>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 1 -->
+    <div class="section">
+      <span class="section__number">01</span>
+      <h2>What Data We Collect</h2>
+      <p>To deliver our automation services, we may collect and process the following types of data on behalf of our clients:</p>
+      <ul>
+        <li>Facebook Page data (page name, page ID, connected accounts)</li>
+        <li>Public comments posted on your Facebook Pages</li>
+        <li>Direct messages and lead inquiry content</li>
+        <li>Names and usernames of people who interact with your pages</li>
+        <li>Contact details submitted through lead generation forms</li>
+        <li>Basic analytics about engagement and response activity</li>
+      </ul>
+      <p>We do not collect sensitive personal data such as financial information, health records, or government-issued ID numbers.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="section">
+      <span class="section__number">02</span>
+      <h2>How We Use It</h2>
+      <p>All data we collect is used solely to provide and improve the services we've been hired to deliver. Specifically, we use it to:</p>
+      <ul>
+        <li>Automate responses to comments and messages on your Facebook Pages</li>
+        <li>Qualify and route incoming leads to the appropriate team members</li>
+        <li>Manage social media workflows on behalf of our clients</li>
+        <li>Monitor and report on automation performance</li>
+      </ul>
+      <p>We do not use your data to train AI models, sell advertising, or build profiles for any purpose unrelated to your service agreement with us.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="section">
+      <span class="section__number">03</span>
+      <h2>How It's Stored</h2>
+      <p>Data is stored on secured servers with access controls and encryption at rest. We take reasonable technical and organizational measures to protect the data we process.</p>
+      <div class="callout">
+        <p><strong>We do not sell, rent, or share your data with third parties</strong> for marketing, advertising, or any purpose outside of delivering our services to you.</p>
+      </div>
+      <p>Subprocessors (such as cloud infrastructure providers) may be used to host or process data. These are bound by data processing agreements and are selected for their strong security practices.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="section">
+      <span class="section__number">04</span>
+      <h2>Facebook &amp; Meta Data Usage</h2>
+      <p>Our services integrate with the <strong>Facebook Pages API</strong> and related Meta platforms. When a client connects their Facebook Page to our system, we are granted permissions to:</p>
+      <ul>
+        <li>Read public comments on your Facebook Page posts</li>
+        <li>Post replies to comments on your behalf</li>
+        <li>Read and respond to messages via Messenger (where applicable)</li>
+        <li>Access Page metadata required for automation workflows</li>
+      </ul>
+      <p>We access only the permissions explicitly granted by the Page administrator. We comply with <a href="https://developers.facebook.com/policy/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">Meta's Platform Terms</a> and do not use Facebook data in ways that violate those terms.</p>
+      <p>Data obtained through Meta's APIs is not used to build user profiles, retarget individuals, or for any purpose beyond providing the specific automation service requested by our client.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="section">
+      <span class="section__number">05</span>
+      <h2>Data Retention</h2>
+      <p>We retain client data only as long as necessary to provide our services.</p>
+      <div class="callout">
+        <p><strong>Default retention period: 90 days.</strong> After this window, data is automatically deleted from our systems unless you have an active service agreement requiring longer retention, or you've requested deletion sooner.</p>
+      </div>
+      <p>When a client ends their engagement with us, their data is deleted within 30 days of the service termination date.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="section">
+      <span class="section__number">06</span>
+      <h2>Your Rights</h2>
+      <p>Depending on your location, you may have rights regarding your personal data, including:</p>
+      <ul>
+        <li>The right to access data we hold about you</li>
+        <li>The right to correct inaccurate data</li>
+        <li>The right to request deletion of your data</li>
+        <li>The right to withdraw consent for data processing</li>
+      </ul>
+      <p>To exercise any of these rights, email us at <a href="mailto:myronmalyk@gmail.com" style="color: var(--accent); text-decoration: none;">myronmalyk@gmail.com</a> with "Data Request" in the subject line. We'll respond within 14 business days.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="section">
+      <span class="section__number">07</span>
+      <h2>Cookies &amp; Tracking</h2>
+      <p>Our public website (tyvelo.com) uses minimal, privacy-respecting analytics to understand traffic patterns. We do not use third-party advertising cookies or cross-site tracking.</p>
+      <p>Our automation tools do not place cookies on the Facebook profiles or pages of end users.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="section">
+      <span class="section__number">08</span>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page will reflect when changes were made. Continued use of our services after changes are posted constitutes acceptance of the updated policy.</p>
+      <p>For material changes, we'll notify active clients via email.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="section">
+      <span class="section__number">09</span>
+      <h2>Contact Us</h2>
+      <p>Questions, requests, or concerns? Reach out directly:</p>
+      <div class="contact-card">
+        <p>Tyvelo — AI Automation Agency</p>
+        <p>British Columbia, Canada</p>
+        <a href="mailto:myronmalyk@gmail.com">myronmalyk@gmail.com</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 Tyvelo. All rights reserved.</p>
+      <a href="/">← Back to tyvelo.com</a>
+    </footer>
+
+  </main>
+
+</body>
+</html>
