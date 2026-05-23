@@ -905,6 +905,83 @@ p { font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; }
 
 .footer__linkedin:hover { color: var(--accent); }
 
+.footer__privacy {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem; color: var(--fg-2);
+  transition: color 0.25s ease; cursor: none; letter-spacing: 0.02em;
+}
+
+.footer__privacy:hover { color: var(--accent); }
+
+/* ============================================================
+   FAQ SECTION
+============================================================ */
+.faq-section { transition: background 0.4s ease; }
+
+.faq__list { margin-top: 56px; }
+
+.faq__item {
+  border-top: 0.5px solid var(--border);
+}
+
+.faq__item:last-child {
+  border-bottom: 0.5px solid var(--border);
+}
+
+.faq__summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 28px 0;
+  list-style: none;
+  cursor: none;
+}
+
+.faq__summary::-webkit-details-marker { display: none; }
+
+.faq__q-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  color: var(--fg);
+  line-height: 1.35;
+}
+
+.faq__icon {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  color: var(--fg-3);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-top: 3px;
+}
+
+.faq__item[open] .faq__icon {
+  transform: rotate(45deg);
+  color: var(--accent);
+}
+
+.faq__a {
+  padding-bottom: 28px;
+  font-size: 0.95rem;
+  color: var(--fg-2);
+  line-height: 1.7;
+  max-width: 68ch;
+}
+
+.faq__cta { margin-top: 48px; }
+
+.faq__more {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  cursor: none;
+  transition: opacity 0.25s ease;
+}
+
+.faq__more:hover { opacity: 0.65; }
+
 /* ============================================================
    SCROLL ANIMATION DEFAULTS — set by JS
 ============================================================ */
