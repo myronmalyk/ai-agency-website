@@ -10,16 +10,20 @@
   <meta property="og:url" content="https://www.tyvelo.com/faq" />
   <meta property="og:title" content="FAQ — Tyvelo AI Automation for Media Buying Agencies" />
   <meta property="og:description" content="Frequently asked questions about Tyvelo's AI automation services — Meta Ads reporting, AI lead routing, pricing, and more." />
-  <meta property="og:image" content="https://www.tyvelo.com/images/logo/logo_white.png" />
+  <meta property="og:image" content="https://www.tyvelo.com/images/og-image.png" />
   <meta property="og:site_name" content="Tyvelo" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="FAQ — Tyvelo AI Automation for Media Buying Agencies" />
   <meta name="twitter:description" content="Frequently asked questions about Tyvelo's AI automation services — Meta Ads reporting, AI lead routing, pricing, and more." />
-  <meta name="twitter:image" content="https://www.tyvelo.com/images/logo/logo_white.png" />
+  <meta name="twitter:image" content="https://www.tyvelo.com/images/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" /></noscript>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="images/logo/logo_white.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <script defer src="/_vercel/insights/script.js"></script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
   <script type="application/ld+json">
@@ -95,6 +99,8 @@
   }
   </script>
   <style>
+    .skip-link { position: absolute; left: -9999px; top: 0; background: #e8e8e8; color: #0a0a0a; padding: 10px 14px; font-family: 'Space Mono', monospace; font-size: 12px; z-index: 1000; }
+    .skip-link:focus { left: 12px; top: 12px; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -346,19 +352,20 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ── NAV ─────────────────────────────────────────── -->
   <nav class="nav" role="navigation">
     <div class="nav__inner">
       <a href="/" class="nav__logo" aria-label="Tyvelo home">
-        <img src="images/logo/logo_text_black.png" alt="Tyvelo" />
+        <picture><source srcset="images/logo/logo_text_black.webp" type="image/webp"><img src="images/logo/logo_text_black.png" alt="Tyvelo" loading="lazy" /></picture>
       </a>
       <a href="/" class="nav__back">← Back to home</a>
     </div>
   </nav>
 
   <!-- ── CONTENT ──────────────────────────────────────── -->
-  <main class="page">
+  <main class="page" id="main">
 
     <header class="page-header">
       <span class="page-label">// FAQ</span>

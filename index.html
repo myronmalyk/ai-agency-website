@@ -3,23 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tyvelo builds AI automation systems and custom AI agents for media buying and performance marketing agencies. Automate Meta Ads reporting, AI lead routing, and more — faster leads, leaner teams, no jargon." />
+  <meta name="description" content="AI automation and custom AI agents built for media buying agencies. Meta Ads reporting, AI lead routing, and more — no jargon. Book a free discovery call." />
   <title>Tyvelo — AI Systems for Media Buying Agencies</title>
   <link rel="canonical" href="https://www.tyvelo.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.tyvelo.com/" />
   <meta property="og:title" content="Tyvelo — AI Systems for Media Buying Agencies" />
   <meta property="og:description" content="Tyvelo builds AI automation systems and custom AI agents for media buying and performance marketing agencies. Automate Meta Ads reporting, AI lead routing, and more." />
-  <meta property="og:image" content="https://www.tyvelo.com/images/logo/logo_white.png" />
+  <meta property="og:image" content="https://www.tyvelo.com/images/og-image.png" />
   <meta property="og:site_name" content="Tyvelo" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tyvelo — AI Systems for Media Buying Agencies" />
-  <meta name="twitter:description" content="Tyvelo builds AI automation systems and custom AI agents for media buying and performance marketing agencies. Automate Meta Ads reporting, AI lead routing, and more." />
-  <meta name="twitter:image" content="https://www.tyvelo.com/images/logo/logo_white.png" />
+  <meta name="twitter:description" content="AI automation and custom AI agents built for media buying agencies. Meta Ads reporting, AI lead routing, and more — no jargon." />
+  <meta name="twitter:image" content="https://www.tyvelo.com/images/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" /></noscript>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="images/logo/logo_white.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="/_vercel/insights/script.js"></script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
@@ -156,6 +160,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="cursor" id="cursor"></div>
 
@@ -163,8 +168,8 @@
   <nav class="nav" id="nav" role="navigation">
     <div class="nav__inner">
       <a href="#" class="nav__wordmark hoverable" aria-label="Tyvelo">
-        <img src="images/logo/logo_text_black.png" alt="Tyvelo" class="logo logo--dark">
-        <img src="images/logo/logo_text_white.png" alt="Tyvelo" class="logo logo--light">
+        <picture><source srcset="images/logo/logo_text_black.webp" type="image/webp"><img src="images/logo/logo_text_black.png" alt="Tyvelo" class="logo logo--dark"></picture>
+        <picture><source srcset="images/logo/logo_text_white.webp" type="image/webp"><img src="images/logo/logo_text_white.png" alt="Tyvelo" class="logo logo--light"></picture>
       </a>
 
       <div class="nav__right">
@@ -190,8 +195,8 @@
   <!-- Mobile menu -->
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <div class="mobile-menu__header">
-      <img src="images/logo/logo_black.png" alt="Tyvelo" class="logo logo--dark" style="height:40px;">
-      <img src="images/logo/logo_white.png" alt="Tyvelo" class="logo logo--light" style="height:40px;">
+      <picture><source srcset="images/logo/logo_black.webp" type="image/webp"><img src="images/logo/logo_black.png" alt="Tyvelo" class="logo logo--dark" style="height:40px;" loading="lazy"></picture>
+      <picture><source srcset="images/logo/logo_white.webp" type="image/webp"><img src="images/logo/logo_white.png" alt="Tyvelo" class="logo logo--light" style="height:40px;" loading="lazy"></picture>
       <button class="mobile-menu__close hoverable" id="mobile-close" aria-label="Close menu">✕</button>
     </div>
     <nav>
@@ -206,6 +211,8 @@
       <span id="mobile-theme-label">Switch to Light</span>
     </button>
   </div>
+
+  <a id="main" tabindex="-1" aria-hidden="true" style="position:absolute"></a>
 
   <!-- ── HERO ──────────────────────────────────────────────── -->
   <section class="hero" id="hero">
@@ -369,7 +376,7 @@
             <span class="lm" data-anim-line><span class="lm__i">You handle your</span></span>
             <span class="lm" data-anim-line><span class="lm__i">business.</span></span>
           </h2>
-          <p class="about__body" data-anim>I'm Myron, founder of Tyvelo. I build AI systems for media buying and performance marketing agencies that are scaling fast and can't afford to lose time on work that should be automated. No hype. No unnecessary complexity. Just systems that work, built around how your agency actually operates.</p>
+          <p class="about__body" data-anim>I'm Myron, founder of Tyvelo. I kept seeing the same four workflows slow down media buying agencies: campaign reporting, lead routing, client updates, ad platform monitoring. So I started building AI systems that fix exactly those — using n8n, Claude, and custom code where it makes sense. I don't sell strategy decks or AI roadmaps. I ship working systems, measure what changes, and move on.</p>
         </div>
         <div class="about__right">
           <div class="about__vals">
@@ -393,6 +400,16 @@
                 <p class="about__val-title">No jargon</p>
                 <p class="about__val-sub">We speak plainly because clarity creates trust.</p>
               </div>
+            </div>
+          </div>
+          <div class="about__fit" data-anim>
+            <div class="about__fit-col">
+              <span class="about__fit-label">// BEST FIT</span>
+              <p class="about__fit-text">Media buying and performance marketing agencies — typically 3–25 people, running spend across Meta, TikTok, YouTube, or Google.</p>
+            </div>
+            <div class="about__fit-col">
+              <span class="about__fit-label">// NOT A FIT</span>
+              <p class="about__fit-text">In-house brand teams, SaaS startups without a paid-ads function, or anyone looking for a quick GPT wrapper.</p>
             </div>
           </div>
         </div>
@@ -462,7 +479,7 @@
     <div class="hero__grid" aria-hidden="true"></div>
     <div class="cta__inner">
       <div class="cta__logo" data-anim aria-hidden="true">
-        <img src="images/logo/logo_black.png" alt="">
+        <picture><source srcset="images/logo/logo_black.webp" type="image/webp"><img src="images/logo/logo_black.png" alt="" loading="lazy" decoding="async"></picture>
       </div>
       <span class="label label--dim" data-anim>// GET STARTED</span>
       <h2 class="cta__headline" id="cta-headline">
@@ -474,6 +491,7 @@
         <!-- Left: subtext -->
         <div class="cta__body-left">
           <p class="cta__sub">Book a free 30-minute discovery call. No pressure — just a conversation about what AI could do for your business.</p>
+          <p class="cta__risk">If we're not a fit, I'll tell you in the first 5 minutes. No deck, no pitch.</p>
         </div>
 
         <!-- Right: contact form -->
@@ -512,8 +530,8 @@
   <footer class="footer" role="contentinfo">
     <div class="footer__inner">
       <a href="#" class="footer__wordmark" aria-label="Tyvelo">
-        <img src="images/logo/logo_black.png" alt="Tyvelo" class="logo logo--dark logo--sm">
-        <img src="images/logo/logo_white.png" alt="Tyvelo" class="logo logo--light logo--sm">
+        <picture><source srcset="images/logo/logo_black.webp" type="image/webp"><img src="images/logo/logo_black.png" alt="Tyvelo" class="logo logo--dark logo--sm" loading="lazy" decoding="async"></picture>
+        <picture><source srcset="images/logo/logo_white.webp" type="image/webp"><img src="images/logo/logo_white.png" alt="Tyvelo" class="logo logo--light logo--sm" loading="lazy" decoding="async"></picture>
       </a>
       <span class="footer__copy">© 2026 Tyvelo. All rights reserved.</span>
       <a href="mailto:myronmalyk@gmail.com" class="footer__email hoverable">myronmalyk@gmail.com</a>

@@ -983,6 +983,67 @@ p { font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; }
 .faq__more:hover { opacity: 0.65; }
 
 /* ============================================================
+   ABOUT — fit block (who this is for)
+============================================================ */
+.about__fit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 0.5px solid var(--border);
+}
+
+.about__fit-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--label-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about__fit-text {
+  font-size: 0.875rem;
+  color: var(--fg-2);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   CTA — risk reversal line
+============================================================ */
+.cta__risk {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: rgba(245,244,240,0.35);
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* ============================================================
+   ACCESSIBILITY — skip link
+============================================================ */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 10px 14px;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  z-index: 10000;
+}
+
+.skip-link:focus { left: 12px; top: 12px; }
+
+/* ============================================================
+   PICTURE — transparent wrapper so CSS on img still applies
+============================================================ */
+picture { display: contents; }
+
+/* ============================================================
    SCROLL ANIMATION DEFAULTS — set by JS
 ============================================================ */
 [data-anim] {
