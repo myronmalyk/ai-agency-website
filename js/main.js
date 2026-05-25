@@ -1,5 +1,5 @@
 /* ============================================================
-   MYRON'S AGENCY — main.js
+   TYVELO — main.js
 ============================================================ */
 (function () {
   'use strict';
@@ -133,7 +133,7 @@
     });
   }
 
-  const heroSubText = "We identify what's slowing your business down — and build AI systems that fix it.";
+  const heroSubText = "We build custom AI automations and agents around how your business actually runs — your lenders, your referral partners, your file flow. Not another off-the-shelf tool.";
 
   const heroTl = gsap.timeline({ delay: 0.2 });
 
