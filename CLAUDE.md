@@ -24,8 +24,9 @@ No build step, no package manager, no compilation — it's plain static files.
 | `/` | `index.html` | Main single-page site |
 | `/privacy` | `privacy.html` | Privacy policy, self-contained inline CSS |
 | `/faq` | `faq.html` | Full FAQ, self-contained inline CSS |
+| `/404` | `404.html` | Served by Vercel on unmatched URLs only; self-contained inline CSS |
 
-**Hard constraint: no new routes.** Only these three pages exist.
+**Hard constraint: no new routes.** Only these four files exist; `/404` is not a navigable route.
 
 ## Architecture
 
@@ -84,7 +85,7 @@ Switching is CSS-only via blend modes and `display` toggling:
 - **Line-mask reveal**: `.lm` has `overflow: hidden`; child `.lm__i` starts at `translateY(110%)` and animates to `0`
 - **Scroll reveals**: Add `data-anim` attribute to any element — JS picks it up automatically
 - **Section labels**: Use `<span class="label">// LABEL TEXT</span>` — Space Mono, dimmed color, `//` prefix is part of the content
-- **Skip link**: `.skip-link` is visually hidden, revealed on `:focus`. Points to `#main` anchor at top of hero.
+- **Skip link**: `.skip-link` is visually hidden, revealed on `:focus`. Points to `#main` which is a real `<main id="main" tabindex="-1">` landmark wrapping hero through FAQ (CTA and footer are outside `<main>`).
 - **FAQ accordion**: Uses native `<details>/<summary>`. The `+` icon rotates 45° to `×` via `.faq__item[open] .faq__icon { transform: rotate(45deg) }`.
 - **About fit block**: `.about__fit` is a two-column grid under `.about__right`, bordered at top.
 - **CTA risk line**: `.cta__risk` — Space Mono, very dim, sits below `.cta__sub`.
@@ -107,7 +108,9 @@ Floating iOS-style frosted glass pill: `position: fixed`, centered via `left: 50
 - Formspree endpoint: `https://formspree.io/f/xvzwezll` ✅
 - Calendly URL: `https://calendly.com/myronmalyk/30min` ✅
 - Email validation runs client-side before fetch; shows error in `.cf__error` if empty/invalid
-- Button reset handled in `finally` block in `main.js` — always resets unless form was hidden on success
+- On success: `contactForm.hidden = true` fires first, then `cfSuccess.hidden = false` reveals the success block (which contains the Calendly link). The form cannot be double-submitted.
+- Button reset is in the `finally` block — resets only if `contactForm.hidden` is false (i.e. on error/network failure, not on success).
+- **Calendly link lives inside `.cf__success`** — it is hidden until the form submits successfully. There is no standalone Calendly button outside the form.
 
 ## SEO
 

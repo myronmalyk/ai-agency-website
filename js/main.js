@@ -299,19 +299,19 @@
         });
 
         if (res.ok) {
+          contactForm.hidden = true;
           cfSuccess.hidden = false;
-          btn.textContent = 'Send message →';
-          btn.disabled = false;
         } else {
           const data = await res.json().catch(() => ({}));
           cfError.textContent = data.errors?.[0]?.message || 'Something went wrong. Please try again.';
-          btn.textContent = 'Send message →';
-          btn.disabled = false;
         }
       } catch {
         cfError.textContent = 'Network error. Please check your connection and try again.';
-        btn.textContent = 'Send message →';
-        btn.disabled = false;
+      } finally {
+        if (!contactForm.hidden) {
+          btn.textContent = 'Send message →';
+          btn.disabled = false;
+        }
       }
     });
   }

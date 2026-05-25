@@ -595,6 +595,9 @@ p { font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; }
 }
 
 .service-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   background: var(--card);
   padding: 48px 44px;
   position: relative; overflow: hidden;

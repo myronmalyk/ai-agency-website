@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Custom AI automations and agents for independent mortgage brokers in Lower Mainland BC. Built around your workflow, your lenders, your file flow. Free 30-minute strategy call." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="Custom AI automations and agents for independent mortgage brokers in Lower Mainland BC. Built around your lenders and file flow. Free 30-min call." />
   <title>Tyvelo — AI Consultant for Lower Mainland Mortgage Brokers</title>
   <link rel="canonical" href="https://www.tyvelo.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.tyvelo.com/" />
   <meta property="og:title" content="Tyvelo — AI Consultant for Lower Mainland Mortgage Brokers" />
-  <meta property="og:description" content="Custom AI automations and agents for independent mortgage brokers in Lower Mainland BC. Built around your workflow, your lenders, your file flow. Free 30-minute strategy call." />
+  <meta property="og:description" content="Custom AI automations and agents for independent mortgage brokers in Lower Mainland BC. Built around your lenders and file flow. Free 30-min call." />
   <meta property="og:image" content="https://www.tyvelo.com/images/og-image.png" />
   <meta property="og:site_name" content="Tyvelo" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tyvelo — AI Consultant for Lower Mainland Mortgage Brokers" />
-  <meta name="twitter:description" content="Custom AI automations and agents for independent mortgage brokers in Lower Mainland BC. Built around your workflow, your lenders, your file flow. Free 30-minute strategy call." />
+  <meta name="twitter:description" content="Custom AI automations and agents for independent mortgage brokers in Lower Mainland BC. Built around your lenders and file flow. Free 30-min call." />
   <meta name="twitter:image" content="https://www.tyvelo.com/images/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,12 +49,22 @@
         },
         "address": {
           "@type": "PostalAddress",
+          "addressLocality": "Abbotsford",
           "addressRegion": "BC",
           "addressCountry": "CA"
         },
         "email": "myronmalyk@gmail.com",
         "sameAs": ["https://linkedin.com/company/tyvelo"],
-        "areaServed": "Lower Mainland BC, Canada",
+        "areaServed": [
+          { "@type": "City", "name": "Abbotsford" },
+          { "@type": "City", "name": "Vancouver" },
+          { "@type": "City", "name": "Surrey" },
+          { "@type": "City", "name": "Burnaby" },
+          { "@type": "City", "name": "Langley" },
+          { "@type": "City", "name": "Coquitlam" },
+          { "@type": "City", "name": "Richmond" }
+        ],
+        "priceRange": "$$$",
         "knowsAbout": [
           "AI Automation",
           "Mortgage Broker Workflow Automation",
@@ -188,7 +199,7 @@
     </button>
   </div>
 
-  <a id="main" tabindex="-1" aria-hidden="true" style="position:absolute"></a>
+  <main id="main" tabindex="-1">
 
   <!-- ── HERO ──────────────────────────────────────────────── -->
   <section class="hero" id="hero">
@@ -269,30 +280,30 @@
         <h2 class="section__headline">Three things, built<br>around your business.</h2>
       </div>
       <div class="services__grid">
-        <article class="service-card hoverable" data-anim>
+        <a href="#contact" class="service-card hoverable" data-anim>
           <span class="service-card__num">01</span>
           <h3 class="service-card__title">AI Strategy</h3>
           <p class="service-card__desc">Free 30-minute call. We map the 2–3 highest-ROI places to start with AI in your business — and you decide if any of them are worth doing. No pitch deck, no obligation.</p>
           <span class="service-card__arrow" aria-hidden="true">→</span>
-        </article>
-        <article class="service-card hoverable" data-anim>
+        </a>
+        <a href="#contact" class="service-card hoverable" data-anim>
           <span class="service-card__num">02</span>
           <h3 class="service-card__title">AI Automations</h3>
           <p class="service-card__desc">Background workflows that run without you touching them — instant lead intake, document collection, status updates to borrowers and realtors, weekly rate sheets to referral partners, renewal pipeline tracking, lender matching. The admin work, off your plate.</p>
           <span class="service-card__arrow" aria-hidden="true">→</span>
-        </article>
-        <article class="service-card hoverable" data-anim>
+        </a>
+        <a href="#contact" class="service-card hoverable" data-anim>
           <span class="service-card__num">03</span>
           <h3 class="service-card__title">AI Agents</h3>
           <p class="service-card__desc">Conversational agents that work when you're not at the desk — 24/7 lead qualifiers that book calls into your calendar, document collectors that text borrowers, realtor follow-up agents that keep referral relationships alive. Built around your file flow, not a generic template.</p>
           <span class="service-card__arrow" aria-hidden="true">→</span>
-        </article>
-        <article class="service-card hoverable" data-anim>
+        </a>
+        <a href="#contact" class="service-card hoverable" data-anim>
           <span class="service-card__num">00</span>
           <h3 class="service-card__title">Not sure where to start?</h3>
           <p class="service-card__desc">That's what the strategy call is for. We'll tell you where the leverage is. If there isn't a fit, we'll say so.</p>
           <span class="service-card__arrow" aria-hidden="true">→</span>
-        </article>
+        </a>
       </div>
     </div>
   </section>
@@ -448,6 +459,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ── CTA ───────────────────────────────────────────────── -->
   <section class="cta section" id="contact">
     <div class="hero__grain" aria-hidden="true"></div>
@@ -493,8 +506,8 @@
 
           <div class="cf__success" id="cf-success" aria-live="polite" hidden>
             <p class="cf__success-msg">Message received. We'll be in touch shortly.</p>
+            <a href="https://calendly.com/myronmalyk/30min" target="_blank" rel="noopener" class="btn btn--outline hoverable">Book your strategy call →</a>
           </div>
-          <a href="https://calendly.com/myronmalyk/30min" target="_blank" rel="noopener" class="btn btn--outline cf__submit hoverable" style="margin-top: 16px;">Book your strategy call →</a>
         </div>
       </div>
     </div>
