@@ -133,7 +133,7 @@
     });
   }
 
-  const heroSubText = "We build custom AI automations and agents around how your business actually runs — your lenders, your referral partners, your file flow. Not another off-the-shelf tool.";
+  const heroSubText = "When someone messages or calls, the first business to reply usually wins. Tyvelo replies and follows up for you — automatically, within 60 seconds, day or night — so the job is yours.";
 
   const heroTl = gsap.timeline({ delay: 0.2 });
 
@@ -309,7 +309,7 @@
         cfError.textContent = 'Network error. Please check your connection and try again.';
       } finally {
         if (!contactForm.hidden) {
-          btn.textContent = 'Send message →';
+          btn.textContent = 'Get my free demo →';
           btn.disabled = false;
         }
       }

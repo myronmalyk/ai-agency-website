@@ -648,6 +648,18 @@ p { font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.65; }
   transform: translate(4px, -4px);
 }
 
+/* Flagship "Speed-to-Lead" card — subtle accent emphasis */
+.service-card--lead { box-shadow: inset 0 2px 0 0 var(--accent); }
+
+/* "More available" note under the services grid */
+.services__note {
+  margin-top: 40px;
+  max-width: 64ch;
+  font-size: 0.9rem;
+  color: var(--fg-3);
+  line-height: 1.7;
+}
+
 /* ============================================================
    HOW IT WORKS
 ============================================================ */
