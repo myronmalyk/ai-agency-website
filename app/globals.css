@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+/* ============================================================
+   TYVELO — design tokens (Tailwind v4 CSS-first @theme)
+   Mirrors the values from the original css/style.css.
+   ============================================================ */
+@theme {
+  --color-bg: #07080b;
+  --color-text: #f4f6fa;
+  --color-accent: #5b8cff;
+  --color-accent2: #7b6bff;
+  --color-green: #38d39f;
+  --color-muted: #9aa0ac;
+  --color-muted2: #7b818c;
+  --color-muted3: #5a606c;
+  --color-card1: #0f1117;
+  --color-card2: #0a0b10;
+
+  --font-sans: var(--font-space-grotesk), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --animate-drift1: drift1 24s ease-in-out infinite;
+  --animate-drift2: drift2 28s ease-in-out infinite;
+  --animate-pulsering: pulsering 3s ease-out infinite;
+  --animate-spinslow: spinslow 26s linear infinite;
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-flow: flow 2.6s linear infinite;
+  --animate-blink: blink 1.2s infinite;
+  --animate-bobble: bobble 7s ease-in-out infinite;
+  --animate-livedot: livedot 2s ease-in-out infinite;
+}
+
+@keyframes drift1 { 0% { transform: translate(0,0); } 50% { transform: translate(70px,-50px); } 100% { transform: translate(0,0); } }
+@keyframes drift2 { 0% { transform: translate(0,0); } 50% { transform: translate(-60px,50px); } 100% { transform: translate(0,0); } }
+@keyframes pulsering { 0% { transform: scale(.85); opacity: .55; } 100% { transform: scale(2.4); opacity: 0; } }
+@keyframes spinslow { to { transform: rotate(360deg); } }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes flow { 0% { left: -4%; opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { left: 102%; opacity: 0; } }
+@keyframes blink { 0%,80%,100% { opacity: .2; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+@keyframes bobble { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes livedot { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(56,211,159,.5); } 50% { opacity: .65; box-shadow: 0 0 0 7px rgba(56,211,159,0); } }
+
+/* ── Base ────────────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: rgba(91,140,255,0.32); color: #fff; }
+
+*::-webkit-scrollbar { width: 11px; height: 11px; }
+*::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.13); border-radius: 8px; }
+*::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.22); }
+*::-webkit-scrollbar-track { background: var(--color-bg); }
+
+/* ── Range slider (cost calculator) ──────────────────────── */
+input[type="range"].tv-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"].tv-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 3px solid #07080b;
+  box-shadow: 0 0 0 1px var(--color-accent), 0 6px 16px rgba(0,0,0,0.55);
+  cursor: pointer;
+  margin-top: -8px;
+}
+input[type="range"].tv-range::-moz-range-thumb {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 3px solid #07080b;
+  box-shadow: 0 0 0 1px var(--color-accent);
+  cursor: pointer;
+}
+input[type="range"].tv-range::-webkit-slider-runnable-track { height: 6px; border-radius: 999px; }
+input[type="range"].tv-range::-moz-range-track { height: 6px; border-radius: 999px; background: transparent; }
+
+/* ── Reveal-on-load hook ─────────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.64s ease, transform 0.64s ease;
+}
+[data-reveal].is-visible { opacity: 1; transform: none; }
+
+/* ── Reduced motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
