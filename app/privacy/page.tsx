@@ -73,7 +73,7 @@ export default function PrivacyPage() {
         </p>
         <p>
           By using our services, you agree to the practices described here. If you have questions,
-          email us at <A href="mailto:myronmalyk@gmail.com">myronmalyk@gmail.com</A>.
+          email us at <A href="mailto:myron@tyvelo.com">myron@tyvelo.com</A>.
         </p>
       </div>
 
@@ -138,7 +138,7 @@ export default function PrivacyPage() {
             "The right to withdraw consent for data processing",
           ]}
         />
-        <p>To exercise any of these rights, email us at <A href="mailto:myronmalyk@gmail.com">myronmalyk@gmail.com</A> with &quot;Data Request&quot; in the subject line. We&apos;ll respond within 14 business days.</p>
+        <p>To exercise any of these rights, email us at <A href="mailto:myron@tyvelo.com">myron@tyvelo.com</A> with &quot;Data Request&quot; in the subject line. We&apos;ll respond within 14 business days.</p>
       </Section>
 
       <Section n="07" title="Cookies & Tracking">
@@ -156,8 +156,11 @@ export default function PrivacyPage() {
         <div className="mt-5 rounded-xl border border-white/[0.08] bg-card1 px-7 py-6">
           <p className="mb-2 text-[14px] text-muted">Tyvelo — AI Consultant</p>
           <p className="mb-2 text-[14px] text-muted">Greater Vancouver, BC, Canada</p>
-          <a href="mailto:myronmalyk@gmail.com" className="font-mono text-[15px] text-accent no-underline hover:underline">
-            myronmalyk@gmail.com
+          <a href="mailto:myron@tyvelo.com" className="block font-mono text-[15px] text-accent no-underline hover:underline">
+            myron@tyvelo.com
+          </a>
+          <a href="tel:+17788094442" className="mt-1.5 block font-mono text-[15px] text-accent no-underline hover:underline">
+            +1 (778) 809-4442
           </a>
         </div>
       </Section>

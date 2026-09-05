@@ -15,7 +15,8 @@ const COLS = [
     label: "CONTACT",
     links: [
       { href: "#contact", label: "Get a demo" },
-      { href: "mailto:myronmalyk@gmail.com", label: "myronmalyk@gmail.com" },
+      { href: "mailto:myron@tyvelo.com", label: "myron@tyvelo.com" },
+      { href: "tel:+17788094442", label: "+1 (778) 809-4442" },
       { href: "https://www.linkedin.com/in/myron-malykhin-791038279", label: "LinkedIn ↗", external: true },
     ],
   },

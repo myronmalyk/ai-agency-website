@@ -82,10 +82,16 @@ export default function Contact() {
 
           <div className="flex flex-wrap gap-[22px] border-t border-white/[0.07] pt-6">
             <a
-              href="mailto:myronmalyk@gmail.com"
+              href="mailto:myron@tyvelo.com"
               className="font-mono text-[13px] text-[#C7CCD6] no-underline transition-colors hover:text-accent"
             >
-              myronmalyk@gmail.com
+              myron@tyvelo.com
+            </a>
+            <a
+              href="tel:+17788094442"
+              className="font-mono text-[13px] text-[#C7CCD6] no-underline transition-colors hover:text-accent"
+            >
+              +1 (778) 809-4442
             </a>
             <a
               href="https://www.linkedin.com/in/myron-malykhin-791038279"

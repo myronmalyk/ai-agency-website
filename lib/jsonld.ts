@@ -134,7 +134,7 @@ export function homeGraph() {
           addressRegion: "BC",
           addressCountry: "CA",
         },
-        email: "myronmalyk@gmail.com",
+        email: "myron@tyvelo.com",
         telephone: "+17788094442",
         sameAs: ["https://www.linkedin.com/in/myron-malykhin-791038279"],
         areaServed: [

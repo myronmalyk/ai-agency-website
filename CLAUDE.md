@@ -101,7 +101,8 @@ Logos in `public/images/logo/` (PNG + WebP, all 677×369, transparent). The dark
 ## Branding
 
 - Agency name: **Tyvelo** (wordmark rendered uppercase "TYVELO")
-- Contact email: myronmalyk@gmail.com
+- Contact email: myron@tyvelo.com
+- Contact phone: +1 (778) 809-4442 (`tel:+17788094442`)
 - LinkedIn: https://linkedin.com/company/tyvelo
 - Founder: Myron, Greater Vancouver / Lower Mainland (BC, Canada)
 
