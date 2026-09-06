@@ -104,7 +104,7 @@ Logos in `public/images/logo/` (PNG + WebP, all 677×369, transparent). The dark
 - Positioning: every local service business runs the same loop — get found → get contacted → quote/book → do the work → get paid & come back — and leaks money at the handoffs. Tyvelo plugs the leaks with automated follow-through. Speed-to-Lead is the entry offer; the loop is the frame.
 - Primary vertical: **trades** (HVAC, plumbing, electrical, roofing, landscaping)
 - Geography: **Fraser Valley + Lower Mainland** — Abbotsford, Surrey, Langley, Chilliwack
-- Contact email: hello@tyvelo.com
+- Contact email: myron@tyvelo.com
 - Contact phone: (778) 809-4442 (`tel:+17788094442`) — founder's direct line, used for calls/texts
 - WhatsApp: https://wa.me/17788094442
 - Founding rate: **$197/mo CAD** flat, per location (`FOUNDING_PRICE` in `lib/site.ts`)
