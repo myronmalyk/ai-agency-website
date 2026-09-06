@@ -73,6 +73,8 @@ Ported from the old vanilla JS (no animation library):
 
 ### Logos
 
+Founder headshot: `public/images/myron.png` (800×800), rendered via `next/image` `fill` + `object-cover` in `components/Founder.tsx`.
+
 Logos in `public/images/logo/` (PNG + WebP, all 677×369, transparent). The dark-only site uses `logo_black.png` (white-content mark) via `next/image` in `components/Brand.tsx` (mark + "TYVELO" wordmark) and in the pipeline engine core. Favicons: `public/favicon.ico` + `public/apple-touch-icon.png`, wired through `metadata.icons`.
 
 ## SEO
