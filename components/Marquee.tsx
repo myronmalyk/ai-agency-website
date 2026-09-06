@@ -1,8 +1,8 @@
 const ITEMS = [
   "Every lead answered in 60 seconds",
   "Missed-call text-back",
-  "Quotes chased until they answer",
-  "Invoices nudged until they're paid",
+  "Quotes chased on a fixed schedule",
+  "Invoices nudged on due date, +7, +14",
   "Service-due recalls that rebook",
   "Built for trades in the Fraser Valley",
 ];

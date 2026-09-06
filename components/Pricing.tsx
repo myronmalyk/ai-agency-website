@@ -45,9 +45,8 @@ export default function Pricing() {
               <span className="text-[17px] text-muted">CAD / month</span>
             </div>
             <p className="m-0 text-[15px] leading-[1.6] text-[#C7CCD6]">
-              Flat, per location, and <strong className="text-white">locked for founding
-              clients</strong> — it stays put as TYVELO grows and the rate goes up for everyone
-              after you.
+              Flat, per location, and <strong className="text-white">locked for 12 months</strong>{" "}
+              for founding clients. No setup fee, no contract.
             </p>
             <div className="mt-2 flex flex-wrap gap-x-2.5 gap-y-2">
               {TERMS.map((t) => (

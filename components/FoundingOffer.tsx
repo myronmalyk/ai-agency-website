@@ -12,8 +12,8 @@ const CARDS = [
   },
   {
     tag: "02 · LOCKED IN",
-    title: `${FOUNDING_PRICE}, and it stays there`,
-    desc: `Founding clients pay a flat ${FOUNDING_PRICE} CAD per location, with no setup fee and no contract. That rate is locked for you as TYVELO grows — the people who come after you will pay more.`,
+    title: `${FOUNDING_PRICE}, locked for 12 months`,
+    desc: `Founding clients pay a flat ${FOUNDING_PRICE} CAD per location, with no setup fee and no contract. That rate is locked for your first 12 months — after that, any change is agreed with you in advance, never applied behind your back.`,
     delay: 80,
     accent: false,
   },
