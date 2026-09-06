@@ -2,17 +2,10 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 import { container, label } from "./ui";
 import { CONTACT_PHONE, CONTACT_PHONE_TEL, HOME_CITY } from "@/lib/site";
-import { hasPublicFile } from "@/lib/assets";
 
-/**
- * TODO: Drop a real headshot at public/images/founder.jpg (square, ~640×640).
- * Until it exists this renders a neutral placeholder — no fake stock photo.
- */
-const FOUNDER_PHOTO = "/images/founder.jpg";
+const FOUNDER_PHOTO = "/images/myron.png";
 
 export default function Founder() {
-  const hasPhoto = hasPublicFile("images/founder.jpg");
-
   return (
     <section id="founder" className="relative pb-[100px] pt-[60px]">
       <div className={container}>
@@ -20,53 +13,26 @@ export default function Founder() {
           delay={0}
           className="grid grid-cols-[0.82fr_1.18fr] items-center gap-12 max-[880px]:grid-cols-1"
         >
-          <div className="relative mx-auto flex aspect-square w-full max-w-[320px] flex-col items-center justify-center gap-4 overflow-hidden rounded-[24px] border border-white/10 bg-[radial-gradient(circle_at_50%_28%,#161B2A,#0A0B10)]">
-            {hasPhoto ? (
-              <>
-                <Image
-                  src={FOUNDER_PHOTO}
-                  alt="Myron, founder of TYVELO"
-                  fill
-                  sizes="(max-width: 880px) 320px, 320px"
-                  className="object-cover"
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,8,11,0.15),rgba(7,8,11,0.85))]"
-                />
-              </>
-            ) : (
-              <div className="pointer-events-none absolute -bottom-[70px] -left-[50px] h-[240px] w-[240px] rounded-full bg-[radial-gradient(circle,rgba(91,140,255,0.18),transparent_64%)]" />
-            )}
+          <div className="relative mx-auto aspect-square w-full max-w-[320px] overflow-hidden rounded-[24px] border border-white/10 bg-[radial-gradient(circle_at_50%_28%,#161B2A,#0A0B10)]">
+            <Image
+              src={FOUNDER_PHOTO}
+              alt="Myron, founder of TYVELO"
+              fill
+              sizes="320px"
+              className="object-cover"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,8,11,0)_58%,rgba(7,8,11,0.38)_78%,rgba(7,8,11,0.94))]"
+            />
 
-            <span className="absolute left-4 top-4 z-10 rounded-full border border-white/[0.12] bg-[rgba(7,8,11,0.55)] px-2.5 py-[5px] font-mono text-[9.5px] tracking-[0.12em] text-muted backdrop-blur-sm">
+            <span className="absolute left-4 top-4 rounded-full border border-white/[0.16] bg-[rgba(7,8,11,0.55)] px-2.5 py-[5px] font-mono text-[9.5px] tracking-[0.12em] text-[#C7CCD6] backdrop-blur-sm">
               {HOME_CITY.toUpperCase()}, BC
             </span>
 
-            {!hasPhoto && (
-              <div
-                aria-hidden="true"
-                className="relative flex h-[110px] w-[110px] items-center justify-center rounded-full border border-[rgba(91,140,255,0.32)] bg-[rgba(91,140,255,0.10)]"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="h-[52px] w-[52px] text-[#9DB6FF] opacity-70"
-                >
-                  <circle cx="12" cy="8.2" r="3.6" stroke="currentColor" strokeWidth="1.4" />
-                  <path
-                    d="M4.6 19.4c0-3.6 3.3-5.8 7.4-5.8s7.4 2.2 7.4 5.8"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </div>
-            )}
-
-            <div className="relative z-10 text-center">
+            <div className="absolute inset-x-0 bottom-0 px-5 pb-5 text-center">
               <div className="text-[16px] font-semibold text-white">Myron</div>
-              <div className="mt-[3px] font-mono text-[10.5px] tracking-[0.10em] text-[#8A909C]">
+              <div className="mt-[3px] font-mono text-[10.5px] tracking-[0.10em] text-[#C7CCD6]">
                 FOUNDER · TYVELO
               </div>
             </div>
