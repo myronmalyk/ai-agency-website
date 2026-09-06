@@ -12,6 +12,9 @@ export const WHATSAPP_NUMBER = "+17788094442";
 export const WHATSAPP_URL = "https://wa.me/17788094442";
 
 export const LINKEDIN_URL = "https://www.linkedin.com/in/myron-malykhin-791038279";
+
+/** GA4 measurement ID. Public by design — it ships in the client bundle. */
+export const GA_MEASUREMENT_ID = "G-J9TVMB3DF4";
 export const CALENDLY_URL = "https://calendly.com/myronmalyk/30min";
 
 /** Founding cohort rate. Flat, per location. */

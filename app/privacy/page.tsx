@@ -142,7 +142,8 @@ export default function PrivacyPage() {
       </Section>
 
       <Section n="07" title="Cookies & Tracking">
-        <p>Our public website (tyvelo.com) uses minimal, privacy-respecting analytics to understand traffic patterns. We do not use third-party advertising cookies or cross-site tracking.</p>
+        <p>Our public website (tyvelo.com) uses <strong>Google Analytics 4</strong> to understand traffic patterns, alongside Vercel&apos;s cookieless analytics. Google Analytics sets first-party cookies (such as <code>_ga</code>) to recognise returning visits and measure how pages are used. We use it only to see which pages and cities bring people in — we do not run advertising cookies, remarketing, or cross-site tracking, and we do not sell or share this data.</p>
+        <p>You can opt out at any time with Google&apos;s <A href="https://tools.google.com/dlpage/gaoptout">browser add-on</A>, by using your browser&apos;s Do Not Track or cookie controls, or by blocking analytics scripts. Nothing on this site is gated behind accepting them.</p>
         <p>The automation tools we build for clients integrate with CRMs, web forms, social media inboxes, calendar or booking tools, and email or SMS providers. These integrations do not place cookies on end users — they operate server-side and are triggered by workflow events, not browser sessions.</p>
       </Section>
 
