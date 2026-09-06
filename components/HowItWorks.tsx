@@ -4,28 +4,33 @@ import { container, section, label, sectionHead, sectionTitle, check } from "./u
 const STEPS = [
   {
     n: "STEP 01",
-    title: "Tell me about your business",
-    desc: "A few minutes by message — your trade, where leads come in, and how you'd want them answered. No call required.",
+    title: "Tell me how work comes in",
+    desc: "A few minutes by message — your trade, where jobs come from, and what usually falls through. You don't have to prepare anything.",
     delay: 0,
     accent: false,
   },
   {
     n: "STEP 02",
     title: "I build it on your setup — free",
-    desc: "I wire TYVELO into your real phone number, web forms and DMs. You don't install anything, switch tools, or learn a dashboard.",
+    desc: "I wire TYVELO into your real number, your web form and your inbox. You don't install software, switch tools, or learn a dashboard.",
     delay: 80,
     accent: false,
   },
   {
     n: "STEP 03",
     title: "Watch it answer a real lead",
-    desc: "You see a lead handled in under 60 seconds before paying a cent. Happy? Keep it running on a simple flat monthly plan.",
+    desc: "You see one of your own leads handled in under 60 seconds before paying a cent. Happy? It keeps running at the flat founding rate below.",
     delay: 160,
     accent: true,
   },
 ];
 
-const CHECKS = ["No software to install", "No new logins", "I handle the tech", "Cancel anytime"];
+const CHECKS = [
+  "No software to install",
+  "No new logins",
+  "I handle the tech",
+  "Cancel anytime",
+];
 
 export default function HowItWorks() {
   return (
@@ -37,7 +42,7 @@ export default function HowItWorks() {
         <Reveal delay={60} className={sectionHead}>
           <h2 className={sectionTitle}>Live in days. Nothing for you to learn.</h2>
           <p className="m-0 max-w-[330px] text-[15px] leading-[1.6] text-muted">
-            You stay on your tools and keep doing your job. I handle the technical side, start to
+            You stay on your tools and keep doing the work. I handle the technical side, start to
             finish.
           </p>
         </Reveal>

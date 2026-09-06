@@ -3,13 +3,24 @@
 import { useState, type FormEvent } from "react";
 import Reveal from "./Reveal";
 import { container, label, btnPrimary, btnGhost } from "./ui";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_TEL,
+  WHATSAPP_URL,
+  LINKEDIN_URL,
+  CALENDLY_URL,
+} from "@/lib/site";
 
 const FORMSPREE = "https://formspree.io/f/xvzwezll";
 
 const POINTS = [
-  { strong: "No call required.", rest: " Reach out by email, WhatsApp or LinkedIn." },
-  { strong: "Demo first, talk later.", rest: " See it work before you commit a dollar." },
-  { strong: "Outcome-measured.", rest: " If response times don't move, the work didn't work." },
+  { strong: "No call required.", rest: " Reach out by text, email, WhatsApp or LinkedIn." },
+  { strong: "Demo first, talk later.", rest: " See it work on your leads before you commit a dollar." },
+  {
+    strong: "Measured monthly.",
+    rest: " You get a report with leads answered, reply times and quotes followed up — real counts, not vibes.",
+  },
 ];
 
 const inputClass =
@@ -62,8 +73,9 @@ export default function Contact() {
             Get a free demo built for your business.
           </h2>
           <p className="m-0 mb-[34px] max-w-[440px] text-[16px] leading-[1.65] text-muted">
-            Tell me where you think you&apos;re losing leads. I&apos;ll build a free working demo on
-            your actual setup and show you it answering a lead in under 60 seconds.
+            Tell me where jobs are slipping — the calls you can&apos;t take, the quotes nobody
+            chases, the invoices sitting past due. I&apos;ll build a free working demo on your
+            actual setup and show you it answering a lead in under 60 seconds.
           </p>
 
           <div className="mb-[34px] flex flex-col gap-4">
@@ -82,19 +94,28 @@ export default function Contact() {
 
           <div className="flex flex-wrap gap-[22px] border-t border-white/[0.07] pt-6">
             <a
-              href="mailto:myron@tyvelo.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="font-mono text-[13px] text-[#C7CCD6] no-underline transition-colors hover:text-accent"
             >
-              myron@tyvelo.com
+              {CONTACT_EMAIL}
             </a>
+            {/* TODO: swap to DEMO_PHONE once AI voice line is live */}
             <a
-              href="tel:+17788094442"
+              href={`tel:${CONTACT_PHONE_TEL}`}
               className="font-mono text-[13px] text-[#C7CCD6] no-underline transition-colors hover:text-accent"
             >
-              +1 (778) 809-4442
+              Text or call: {CONTACT_PHONE}
             </a>
             <a
-              href="https://www.linkedin.com/in/myron-malykhin-791038279"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[13px] text-[#C7CCD6] no-underline transition-colors hover:text-accent"
+            >
+              WhatsApp ↗
+            </a>
+            <a
+              href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono text-[13px] text-[#C7CCD6] no-underline transition-colors hover:text-accent"
@@ -103,8 +124,8 @@ export default function Contact() {
             </a>
           </div>
           <p className="m-0 mt-[22px] text-[13.5px] leading-[1.6] text-muted2">
-            Built and run by Myron, founder of TYVELO — helping local service businesses across the
-            Lower Mainland stop losing leads to slow response.
+            Built and run by Myron, founder of TYVELO — helping trades across the Fraser Valley
+            and Lower Mainland stop losing leads, quotes and invoices to slow follow-up.
           </p>
         </Reveal>
 
@@ -119,11 +140,11 @@ export default function Contact() {
               </div>
               <h3 className="m-0 text-[21px] font-bold">Got it — talk soon.</h3>
               <p className="m-0 mb-1.5 max-w-[320px] text-[14.5px] leading-[1.6] text-muted">
-                I&apos;ll put together a working demo for your business and reply shortly — no call
-                required.
+                I&apos;ll put together a working demo for your business and reply shortly. If
+                it&apos;s urgent, text me on {CONTACT_PHONE}.
               </p>
               <a
-                href="https://calendly.com/myronmalyk/30min"
+                href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener"
                 className={btnGhost}

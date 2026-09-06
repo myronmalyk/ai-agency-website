@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Calculator from "@/components/Calculator";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
+import Pricing from "@/components/Pricing";
 import Pipeline from "@/components/Pipeline";
 import FoundingOffer from "@/components/FoundingOffer";
 import Guarantee from "@/components/Guarantee";
@@ -25,6 +26,7 @@ export default function Home() {
         <Calculator />
         <Services />
         <HowItWorks />
+        <Pricing />
         <Pipeline />
         <FoundingOffer />
         <Guarantee />

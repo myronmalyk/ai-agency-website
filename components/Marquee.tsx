@@ -1,10 +1,10 @@
 const ITEMS = [
-  "Speed-to-lead automation",
   "Every lead answered in 60 seconds",
-  "AI answers your calls 24/7",
   "Missed-call text-back",
-  "Reviews on autopilot",
-  "Built on n8n + AI",
+  "Quotes chased until they answer",
+  "Invoices nudged until they're paid",
+  "Service-due recalls that rebook",
+  "Built for trades in the Fraser Valley",
 ];
 
 function Group() {

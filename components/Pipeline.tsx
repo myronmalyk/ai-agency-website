@@ -2,14 +2,21 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 import { container, section, label, sectionTitle } from "./ui";
 
-const SOURCES = ["Web form", "Phone call", "Instagram DM", "Facebook", "WhatsApp"];
+const SOURCES = [
+  "Web form",
+  "Phone call",
+  "Google Business Profile",
+  "Instagram DM",
+  "Facebook",
+  "WhatsApp",
+];
 const ACTIONS = [
   "Instant reply <60s",
-  "AI answers inbound calls",
-  "Follow-up sequence",
   "Missed-call text-back",
-  "Review request",
-  "Appointment reminder",
+  "Quote follow-up · day 2 / 7 / 21",
+  "Invoice nudge · due / +7 / +14",
+  "Service-due recall",
+  "AI answers inbound calls",
 ];
 
 const nodeBase =
@@ -28,8 +35,8 @@ export default function Pipeline() {
         <Reveal delay={60} className="mb-[60px] flex flex-wrap items-end justify-between gap-5">
           <h2 className={sectionTitle}>Plugs into the tools you already run.</h2>
           <p className="m-0 max-w-[340px] text-[15px] leading-[1.6] text-muted">
-            No new software to learn. TYVELO sits on top of your existing channels and runs the
-            busywork in the background — built with n8n, AI and custom code.
+            No new software to learn. TYVELO sits on top of the number, forms and inboxes you
+            already use, and runs the follow-through in the background.
           </p>
         </Reveal>
 

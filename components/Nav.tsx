@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Brand from "./Brand";
+import { CONTACT_PHONE, CONTACT_PHONE_TEL } from "@/lib/site";
 
 const LINKS = [
   { href: "#services", label: "Services" },
   { href: "#how", label: "How it works" },
-  { href: "#offer", label: "Founding offer" },
+  { href: "#pricing", label: "Pricing" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -30,7 +31,7 @@ export default function Nav() {
       <div className="mx-auto flex max-w-[1180px] items-center justify-between gap-6 px-8 py-4 max-[880px]:px-[22px]">
         <Brand href="#top" />
 
-        <div className="flex items-center gap-[34px] max-[880px]:hidden">
+        <div className="flex items-center gap-[26px] max-[880px]:hidden">
           {LINKS.map((l) => (
             <a
               key={l.href}
@@ -40,6 +41,13 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
+          {/* TODO: swap to DEMO_PHONE once AI voice line is live */}
+          <a
+            href={`tel:${CONTACT_PHONE_TEL}`}
+            className="whitespace-nowrap font-mono text-[13px] text-[#C7CCD6] no-underline transition-colors hover:text-accent"
+          >
+            {CONTACT_PHONE}
+          </a>
           <a
             href="#contact"
             className="rounded-[10px] bg-accent px-[18px] py-2.5 text-sm font-semibold text-[#07080B] no-underline transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_-10px_rgba(91,140,255,0.7)]"
@@ -101,6 +109,13 @@ export default function Nav() {
           className="px-5 py-3 text-2xl font-semibold text-accent no-underline"
         >
           Get a free demo →
+        </a>
+        <a
+          href={`tel:${CONTACT_PHONE_TEL}`}
+          onClick={() => setOpen(false)}
+          className="px-5 py-3 font-mono text-base text-[#C7CCD6] no-underline"
+        >
+          Text or call {CONTACT_PHONE}
         </a>
       </div>
     </nav>

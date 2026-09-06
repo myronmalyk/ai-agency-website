@@ -3,6 +3,7 @@
 import { useState, type CSSProperties } from "react";
 import Reveal from "./Reveal";
 import { container, section, label, sectionHead, sectionTitle, btnPrimary } from "./ui";
+import { RESPONSE_STUDY } from "@/lib/site";
 
 const WINBACK = 0.3;
 const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
@@ -15,8 +16,8 @@ function fill(min: number, max: number, v: number): CSSProperties {
 }
 
 export default function Calculator() {
-  const [leads, setLeads] = useState(50);
-  const [value, setValue] = useState(600);
+  const [leads, setLeads] = useState(40);
+  const [value, setValue] = useState(850);
   const [pct, setPct] = useState(35);
 
   const slow = leads * (1 - pct / 100);
@@ -35,7 +36,7 @@ export default function Calculator() {
         <Reveal delay={60} className={sectionHead}>
           <h2 className={sectionTitle}>Slow replies are quietly expensive.</h2>
           <p className="m-0 max-w-[330px] text-[15px] leading-[1.6] text-muted">
-            Most owners lose more to slow follow-up than to any ad budget. Drag the sliders to
+            Most trades lose more to slow follow-up than to any ad budget. Drag the sliders to
             your numbers and see what it adds up to.
           </p>
         </Reveal>
@@ -45,7 +46,7 @@ export default function Calculator() {
           className="grid grid-cols-[1.05fr_0.95fr] overflow-hidden rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,#0F1117,#0A0B10)] shadow-[0_40px_90px_-50px_rgba(0,0,0,0.9)] max-[880px]:grid-cols-1"
         >
           <div className="flex flex-col gap-7 border-r border-white/[0.07] p-[34px] max-[880px]:border-b max-[880px]:border-r-0">
-            <Field name="Leads a month" out={`${leads}`}>
+            <Field name="Leads and quote requests a month" out={`${leads}`}>
               <input
                 type="range"
                 className="tv-range"
@@ -55,7 +56,7 @@ export default function Calculator() {
                 value={leads}
                 style={fill(5, 250, leads)}
                 onChange={(e) => setLeads(+e.target.value)}
-                aria-label="Leads a month"
+                aria-label="Leads and quote requests a month"
               />
             </Field>
             <Field name="An average job is worth" out={money(value)}>
@@ -85,9 +86,22 @@ export default function Calculator() {
               />
             </Field>
             <p className="m-0 text-[12.5px] leading-[1.55] text-muted2">
-              Honest math: of the leads you don&apos;t reach fast, we assume instant replies win
-              back a conservative <strong className="text-muted">30%</strong>. Your real numbers
-              show up in the free demo — no guesswork.
+              Of the leads you don&apos;t reach fast, this assumes instant replies win back{" "}
+              <strong className="text-muted">30%</strong> — our conservative assumption, not a
+              measured result.<sup>1</sup> Your real numbers show up in the free demo.
+            </p>
+            <p className="m-0 text-[11.5px] leading-[1.55] text-muted2">
+              <sup>1</sup> The first-responder advantage itself is published research:{" "}
+              {RESPONSE_STUDY.cite}{" "}
+              <a
+                href={RESPONSE_STUDY.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted2 underline underline-offset-2 hover:text-accent"
+              >
+                Read it ↗
+              </a>{" "}
+              The 30% win-back figure above is ours, deliberately set low.
             </p>
           </div>
 
@@ -110,8 +124,8 @@ export default function Calculator() {
                 ↑
               </span>
               <div className="text-[14.5px] leading-[1.5] text-[#D6DAE2]">
-                <strong className="text-white">{jobs} jobs a month</strong> up for grabs — TYVELO
-                is built to win them back.
+                <strong className="text-white">{jobs} jobs a month</strong> up for grabs — the
+                follow-through TYVELO does is what goes after them.
               </div>
             </div>
             <a href="#contact" className={`${btnPrimary} w-full`}>

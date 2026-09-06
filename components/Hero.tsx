@@ -1,9 +1,9 @@
 import Reveal from "./Reveal";
-import Counter from "./Counter";
 import HeroSpotlight from "./HeroSpotlight";
-import LeadCard from "./LeadCard";
+import DemoShowcase from "./DemoShowcase";
 import Marquee from "./Marquee";
 import { btnPrimary, btnGhost, chipAccent, chipDot } from "./ui";
+import { CONTACT_PHONE, CONTACT_PHONE_TEL, RESPONSE_STUDY } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -19,7 +19,7 @@ export default function Hero() {
             className="mb-[26px] inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.02] px-3.5 py-[7px] font-mono text-[11.5px] tracking-[0.16em] text-[#C7CCD6]"
           >
             <span className="h-2 w-2 animate-livedot rounded-full bg-green" />
-            SYSTEM ONLINE · GREATER VANCOUVER
+            FOR TRADES · FRASER VALLEY + LOWER MAINLAND
           </Reveal>
 
           <Reveal
@@ -39,12 +39,21 @@ export default function Hero() {
           <Reveal
             as="p"
             delay={120}
-            className="m-0 mb-[34px] max-w-[520px] text-[clamp(16px,1.6vw,19px)] leading-[1.6] text-muted"
+            className="m-0 mb-[34px] max-w-[540px] text-[clamp(16px,1.6vw,19px)] leading-[1.6] text-muted"
           >
-            AI speed-to-lead for local service businesses in Greater Vancouver. When someone
-            messages or calls, the first business to reply usually wins — so TYVELO replies and
-            follows up for you, automatically, day or night. The job is yours, not your
-            competitor&apos;s.
+            HVAC, plumbing, electrical, roofing, landscaping — you run the same loop every week:
+            get found, get contacted, quote, do the work, get paid — and money leaks at every
+            handoff. TYVELO does the follow-through so the jobs you already earned stop slipping.{" "}
+            {/* TODO: swap to DEMO_PHONE once AI voice line is live */}
+            <span className="text-[#C7CCD6]">
+              Text or call me:{" "}
+              <a
+                href={`tel:${CONTACT_PHONE_TEL}`}
+                className="font-medium text-accent no-underline hover:underline"
+              >
+                {CONTACT_PHONE}
+              </a>
+            </span>
           </Reveal>
 
           <Reveal delay={180} className="mb-[22px] flex flex-wrap gap-3.5">
@@ -52,7 +61,7 @@ export default function Hero() {
               Get a free demo →
             </a>
             <a href="#services" className={btnGhost}>
-              See what we automate
+              See where you&apos;re leaking
             </a>
           </Reveal>
 
@@ -69,43 +78,59 @@ export default function Hero() {
             </span>
           </Reveal>
 
+          {/*
+            Stats are server-rendered as final values — the old count-up rendered
+            "<0" and "0%" until JS ran, which read as broken.
+          */}
           <Reveal
             delay={240}
-            className="grid max-w-[540px] grid-cols-3 gap-[18px] border-t border-white/[0.07] pt-7 max-[880px]:grid-cols-1"
+            className="max-w-[560px] border-t border-white/[0.07] pt-7"
           >
-            <div>
-              <div className="text-[34px] font-bold tracking-[-0.02em] text-white">
-                &lt;<Counter to={60} />
+            <div className="grid grid-cols-3 gap-[18px] max-[880px]:grid-cols-1">
+              <div>
+                <div className="text-[34px] font-bold tracking-[-0.02em] text-white">&lt;60</div>
+                <div className="mt-1.5 font-mono text-[11px] leading-[1.45] tracking-[0.08em] text-muted2">
+                  SEC · MAX FIRST-
+                  <br />
+                  REPLY TIME
+                </div>
               </div>
-              <div className="mt-1.5 font-mono text-[11px] leading-[1.45] tracking-[0.08em] text-muted2">
-                SEC · MAX FIRST-
-                <br />
-                REPLY TIME
+              <div>
+                <div className="text-[34px] font-bold tracking-[-0.02em] text-white">24/7</div>
+                <div className="mt-1.5 font-mono text-[11px] leading-[1.45] tracking-[0.08em] text-muted2">
+                  ALWAYS-ON
+                  <br />
+                  COVERAGE
+                </div>
+              </div>
+              <div>
+                <div className="text-[34px] font-bold tracking-[-0.02em] text-white">
+                  {RESPONSE_STUDY.multiple}
+                  <sup className="ml-0.5 align-super text-[13px] font-medium text-muted2">1</sup>
+                </div>
+                <div className="mt-1.5 font-mono text-[11px] leading-[1.45] tracking-[0.08em] text-muted2">
+                  MORE LIKELY TO QUALIFY
+                  <br />
+                  IF YOU REPLY WITHIN THE HOUR
+                </div>
               </div>
             </div>
-            <div>
-              <div className="text-[34px] font-bold tracking-[-0.02em] text-white">24/7</div>
-              <div className="mt-1.5 font-mono text-[11px] leading-[1.45] tracking-[0.08em] text-muted2">
-                ALWAYS-ON
-                <br />
-                COVERAGE
-              </div>
-            </div>
-            <div>
-              <div className="text-[34px] font-bold tracking-[-0.02em] text-white">
-                <Counter to={78} suffix="%" delay={670} />
-              </div>
-              <div className="mt-1.5 font-mono text-[11px] leading-[1.45] tracking-[0.08em] text-muted2">
-                BUY FROM WHOEVER
-                <br />
-                REPLIES FIRST
-              </div>
-            </div>
+            <p className="m-0 mt-5 max-w-[520px] text-[11.5px] leading-[1.6] text-muted2">
+              <sup>1</sup> {RESPONSE_STUDY.cite}{" "}
+              <a
+                href={RESPONSE_STUDY.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted2 underline underline-offset-2 hover:text-accent"
+              >
+                Read the study ↗
+              </a>
+            </p>
           </Reveal>
         </div>
 
         <Reveal delay={160}>
-          <LeadCard />
+          <DemoShowcase />
         </Reveal>
       </div>
 

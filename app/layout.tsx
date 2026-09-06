@@ -19,13 +19,13 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-// Short, keyword-led title for the browser/search-result tab (~54 chars — avoids truncation).
-const TITLE = "AI Speed-to-Lead for Local Service Businesses | Tyvelo";
+// Short, keyword-led title for the browser/search-result tab (~56 chars — avoids truncation).
+const TITLE = "Lead & Quote Follow-Up for Fraser Valley Trades | Tyvelo";
 // Longer, benefit-led title for social shares (OG/Twitter aren't length-capped).
 const SOCIAL_TITLE =
-  "Tyvelo — Every Lead, Answered in 60 Seconds. AI Speed-to-Lead for Local Service Businesses.";
+  "Tyvelo — Every Lead Answered in 60 Seconds. Follow-Up Automation for Fraser Valley Trades.";
 const DESCRIPTION =
-  "Instant lead response and follow-up for local service businesses in Greater Vancouver. See a free demo built for your business — no call required.";
+  "Every lead answered in 60 seconds, every quote chased, every invoice nudged — for trades in Abbotsford, Surrey, Langley and Chilliwack. Free demo on your real leads.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
