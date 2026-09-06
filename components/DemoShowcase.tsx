@@ -1,4 +1,5 @@
 import { hasPublicFile } from "@/lib/assets";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 /**
  * Hero demo panel. If a real screen recording has been dropped at
@@ -37,7 +38,7 @@ export default function DemoShowcase() {
             >
               <source src="/video/demo.mp4" type="video/mp4" />
               Your browser can&apos;t play this video. Email {""}
-              <a href="mailto:hello@tyvelo.com">hello@tyvelo.com</a> and I&apos;ll send it over.
+              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> and I&apos;ll send it over.
             </video>
           </div>
         ) : (

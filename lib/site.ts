@@ -2,7 +2,7 @@
  * Single source of truth for contact details, geography and pricing.
  * Anything that appears in more than one place lives here so copy can't drift.
  */
-export const CONTACT_EMAIL = "hello@tyvelo.com";
+export const CONTACT_EMAIL = "myron@tyvelo.com";
 
 /** Founder's direct line — for calls and texts from prospects. */
 export const CONTACT_PHONE = "(778) 809-4442";
