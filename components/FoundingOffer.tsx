@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import { container, section, label, sectionTitle, btnPrimary, chipAccent, chipDot } from "./ui";
+import { FOUNDING_PRICE } from "@/lib/site";
 
 const CARDS = [
   {
@@ -11,15 +12,15 @@ const CARDS = [
   },
   {
     tag: "02 · LOCKED IN",
-    title: "Founding rate that won't rise",
-    desc: "Come on as one of the first and lock a founding monthly price that stays put as TYVELO grows. Backing me early earns a rate I won't offer later.",
+    title: `${FOUNDING_PRICE}, and it stays there`,
+    desc: `Founding clients pay a flat ${FOUNDING_PRICE} CAD per location, with no setup fee and no contract. That rate is locked for you as TYVELO grows — the people who come after you will pay more.`,
     delay: 80,
     accent: false,
   },
   {
-    tag: "03 · ZERO-RISK",
-    title: "You only pay if it works",
-    desc: "I prove it on your real leads first. If TYVELO doesn't beat your current response time, you walk away owing nothing — and there's no contract, ever.",
+    tag: "03 · PROVEN FIRST",
+    title: "Nothing is billed until you've seen it run",
+    desc: "I build the demo on your real leads first. You watch it handle them, then decide. After that you get a monthly report with the actual numbers — leads answered, reply times, quotes followed up.",
     delay: 160,
     accent: true,
   },
@@ -45,10 +46,10 @@ export default function FoundingOffer() {
           </span>
         </Reveal>
         <Reveal as="p" delay={90} className="m-0 mb-[44px] max-w-[680px] text-[16.5px] leading-[1.65] text-[#A8AEB9]">
-          Straight talk: TYVELO is new, so I&apos;m onboarding a small group of founding local
-          businesses instead of chasing volume. You get my full attention, a price that won&apos;t
-          go up, and zero risk — because you watch it working on your own leads before you decide
-          anything.
+          Straight talk: TYVELO is new, so I&apos;m onboarding a small group of founding trades
+          instead of chasing volume. No client list to show you yet — what I can offer is my full
+          attention, a rate that won&apos;t go up, and a demo running on your own leads before you
+          decide anything.
         </Reveal>
 
         <div className="grid grid-cols-3 gap-[18px] max-[880px]:grid-cols-1">
@@ -74,9 +75,9 @@ export default function FoundingOffer() {
             Claim a founding spot →
           </a>
           <span className="text-[14px] leading-[1.5] text-[#8A909C]">
-            No call required — message me and I&apos;ll build your free demo.{" "}
+            Message me and I&apos;ll build your free demo.{" "}
             <span className="text-[#C7CCD6]">
-              I&apos;d rather earn one delighted local business than oversell ten.
+              I&apos;d rather earn one delighted local trade than oversell ten.
             </span>
           </span>
         </Reveal>

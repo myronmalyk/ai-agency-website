@@ -1,23 +1,39 @@
 import Link from "next/link";
 import Brand from "./Brand";
 import { container } from "./ui";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_TEL,
+  WHATSAPP_URL,
+  LINKEDIN_URL,
+  HOME_CITY,
+} from "@/lib/site";
 
 const COLS = [
   {
     label: "EXPLORE",
     links: [
-      { href: "#services", label: "Services" },
-      { href: "#stack", label: "Stack" },
+      { href: "#services", label: "Where the money leaks" },
+      { href: "#pricing", label: "Pricing" },
       { href: "#faq", label: "FAQ" },
+    ],
+  },
+  {
+    label: "SERVICE AREA",
+    links: [
+      { href: "/abbotsford", label: "Abbotsford" },
+      { href: "/surrey", label: "Surrey" },
     ],
   },
   {
     label: "CONTACT",
     links: [
       { href: "#contact", label: "Get a demo" },
-      { href: "mailto:myron@tyvelo.com", label: "myron@tyvelo.com" },
-      { href: "tel:+17788094442", label: "+1 (778) 809-4442" },
-      { href: "https://www.linkedin.com/in/myron-malykhin-791038279", label: "LinkedIn ↗", external: true },
+      { href: `mailto:${CONTACT_EMAIL}`, label: CONTACT_EMAIL },
+      { href: `tel:${CONTACT_PHONE_TEL}`, label: CONTACT_PHONE },
+      { href: WHATSAPP_URL, label: "WhatsApp ↗", external: true },
+      { href: LINKEDIN_URL, label: "LinkedIn ↗", external: true },
     ],
   },
   {
@@ -36,11 +52,11 @@ export default function Footer() {
         <div className="max-w-[300px]">
           <Brand href="#top" markHeight={24} className="mb-3.5" />
           <p className="m-0 text-[14px] leading-[1.6] text-muted2">
-            AI speed-to-lead automation for local service businesses. Every lead answered in 60
-            seconds.
+            Automated follow-through for trades in the Fraser Valley and Lower Mainland. Every
+            lead answered, every quote chased, every invoice nudged.
           </p>
         </div>
-        <div className="flex flex-wrap gap-[54px]">
+        <div className="flex flex-wrap gap-[44px]">
           {COLS.map((col) => (
             <div key={col.label} className="flex flex-col gap-[11px]">
               <span className="mb-[3px] font-mono text-[10.5px] tracking-[0.14em] text-muted2">
@@ -49,7 +65,7 @@ export default function Footer() {
               {col.links.map((l) => {
                 const cls =
                   "text-[14px] text-muted no-underline transition-colors hover:text-white";
-                // Internal page routes (e.g. /privacy, /faq) use next/link.
+                // Internal page routes (e.g. /privacy, /abbotsford) use next/link.
                 if (l.href.startsWith("/")) {
                   return (
                     <Link key={l.label} href={l.href} className={cls}>
@@ -74,11 +90,35 @@ export default function Footer() {
           ))}
         </div>
       </div>
+
+      {/* Business details — who you're actually dealing with. */}
+      <div className={`${container} border-t border-white/[0.05] pt-6`}>
+        <p className="m-0 font-mono text-[11.5px] leading-[1.7] text-muted2">
+          {/* TODO: replace with the registered legal name + BC business registration number
+              once the business is incorporated / registered. */}
+          TYVELO — sole proprietorship, registration pending · {HOME_CITY}, British Columbia,
+          Canada ·{" "}
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="text-muted2 no-underline transition-colors hover:text-accent"
+          >
+            {CONTACT_EMAIL}
+          </a>{" "}
+          ·{" "}
+          <a
+            href={`tel:${CONTACT_PHONE_TEL}`}
+            className="text-muted2 no-underline transition-colors hover:text-accent"
+          >
+            {CONTACT_PHONE}
+          </a>
+        </p>
+      </div>
+
       <div
-        className={`${container} flex flex-wrap items-center justify-between gap-3.5 border-t border-white/[0.05] pb-10 pt-6 font-mono text-[12px] text-muted2`}
+        className={`${container} mt-4 flex flex-wrap items-center justify-between gap-3.5 border-t border-white/[0.05] pb-10 pt-6 font-mono text-[12px] text-muted2`}
       >
         <span>© 2026 TYVELO. All rights reserved.</span>
-        <span>Greater Vancouver · Built with n8n + AI</span>
+        <span>Abbotsford · Surrey · Langley · Chilliwack</span>
       </div>
     </footer>
   );

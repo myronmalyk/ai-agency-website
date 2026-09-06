@@ -4,9 +4,9 @@ import SubpageShell from "@/components/SubpageShell";
 import { allFaqs, faqGraph, breadcrumbGraph } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: { absolute: "FAQ — Tyvelo AI Speed-to-Lead for Local Service Businesses" },
+  title: { absolute: "FAQ — Tyvelo Follow-Up Automation for Fraser Valley Trades" },
   description:
-    "How Tyvelo's AI speed-to-lead automation works for local service businesses — cost, the free demo, and getting started. No call required.",
+    "How Tyvelo works for trades — what it costs, whether automated texting is legal in Canada, who owns the workflows, and what quote chasing and maintenance recall actually do.",
   alternates: { canonical: "/faq" },
 };
 
@@ -30,7 +30,7 @@ export default function FaqPage() {
             Frequently Asked Questions
           </h1>
           <p className="text-[14px] text-muted">
-            Everything local service owners ask before getting a free demo.
+            What owners of trades businesses ask before getting a free demo.
           </p>
         </header>
 
@@ -58,9 +58,9 @@ export default function FaqPage() {
             Still have questions?
           </h2>
           <p className="mb-6 text-[14px] leading-[1.7] text-muted">
-            The fastest answer is a working demo. Tell me about your business and I&apos;ll build a
-            free speed-to-lead demo on your actual setup — no call required. Prefer to ask first?
-            Email me or reach out on LinkedIn.
+            The fastest answer is a working demo. Tell me how work comes into your business and
+            I&apos;ll build one on your actual setup, free. Prefer to ask something first? Text me,
+            email me, or reach out on LinkedIn.
           </p>
           <Link
             href="/#contact"
