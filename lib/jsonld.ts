@@ -17,7 +17,7 @@ export interface QA {
 export const homeFaqs: QA[] = [
   {
     q: "What does it cost?",
-    a: `Founding rate: ${FOUNDING_PRICE} CAD flat, per location, locked for founding clients. No setup fee, no contract, cancel any time. That covers Speed-to-Lead plus one more stage of your choice — quote chasing, invoice chasing or maintenance recall. Extra stages are added on top later, only if you ask. The demo is free, and you watch it run on your real leads before anything is billed.`,
+    a: `Founding rate: ${FOUNDING_PRICE} CAD flat, per location, locked for 12 months for founding clients. No setup fee, no contract, cancel any time. That covers Speed-to-Lead plus one more stage of your choice — quote chasing, invoice chasing or maintenance recall. Extra stages are added on top later, only if you ask. The demo is free, and you watch it run on your real leads before anything is billed.`,
   },
   {
     q: "What's Quote Chasing?",

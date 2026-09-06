@@ -20,9 +20,11 @@ export default function Calculator() {
   const [value, setValue] = useState(850);
   const [pct, setPct] = useState(35);
 
+  // Keep the money unrounded through the whole chain — rounding jobs first
+  // compounded the error into the headline figure (7.8 jobs -> "8" -> $6,800).
   const slow = leads * (1 - pct / 100);
-  const jobs = Math.round(slow * WINBACK);
-  const m = jobs * value;
+  const jobs = slow * WINBACK;
+  const revenueAtStake = jobs * value;
 
   return (
     <section
@@ -111,12 +113,12 @@ export default function Calculator() {
             </div>
             <div className="flex items-baseline gap-2">
               <span className="text-[clamp(40px,6vw,60px)] font-bold leading-none tracking-[-0.03em] text-white">
-                {money(m)}
+                {money(revenueAtStake)}
               </span>
               <span className="text-[17px] text-muted">/ month</span>
             </div>
             <div className="mt-2.5 text-[15.5px] text-[#C7CCD6]">
-              ≈ {money(m * 12)} a year going to whoever replies first
+              ≈ {money(revenueAtStake * 12)} a year going to whoever replies first
             </div>
             <div className="my-[22px] h-px bg-white/[0.08]" />
             <div className="mb-[22px] flex items-center gap-[13px]">
@@ -124,7 +126,7 @@ export default function Calculator() {
                 ↑
               </span>
               <div className="text-[14.5px] leading-[1.5] text-[#D6DAE2]">
-                <strong className="text-white">{jobs} jobs a month</strong> up for grabs — the
+                <strong className="text-white">{jobs.toFixed(1)} jobs a month</strong> up for grabs — the
                 follow-through TYVELO does is what goes after them.
               </div>
             </div>

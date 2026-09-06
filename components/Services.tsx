@@ -76,16 +76,17 @@ export default function Services() {
             <h3 className="m-0 mb-3.5 text-[26px] font-bold tracking-[-0.02em]">Speed-to-Lead</h3>
             <Hook>How many jobs went to whoever picked up while you were under a sink?</Hook>
             <p className="m-0 mb-[22px] text-[15px] leading-[1.65] text-[#A8AEB9]">
-              Every inbound lead gets a personal reply in under 60 seconds, then an automatic
-              follow-up sequence until they answer or tell you to stop. Day, night, weekend, on a
-              roof — you&apos;re the trade that got back to them first.
+              Every inbound lead gets a personal reply in under 60 seconds, then a short
+              follow-up sequence — four messages over 14 days — that stops the moment they reply,
+              opt out, or the window ends. Day, night, weekend, on a roof — you&apos;re the trade
+              that got back to them first.
             </p>
             <ul className="m-0 mb-[22px] flex list-none flex-col gap-2.5 p-0 text-[14.5px] leading-[1.5] text-[#D6DAE2]">
               {[
                 "Web forms, calls and DMs answered in one place",
                 "Missed-call text-back — the call you couldn't take turns into a text thread",
                 "After-hours and weekend cover, without an answering service",
-                "Follow-up that keeps going until they reply",
+                "Four follow-ups over 14 days, then it stops — never an endless drip",
               ].map((b) => (
                 <li key={b} className="flex items-start gap-2.5">
                   <span className="mt-[3px] flex-none text-[12px] text-green">✓</span>
