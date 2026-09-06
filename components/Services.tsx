@@ -1,7 +1,6 @@
 import Reveal from "./Reveal";
 import LoopDiagram from "./LoopDiagram";
 import { container, section, label, sectionHead, sectionTitle, pill } from "./ui";
-import { CONTACT_PHONE, CONTACT_PHONE_TEL } from "@/lib/site";
 
 const cardBase =
   "group relative flex h-full flex-col overflow-hidden rounded-[20px] p-8 no-underline text-inherit transition-[transform,border-color,box-shadow,background] duration-[250ms] max-[880px]:p-6";
@@ -119,23 +118,12 @@ export default function Services() {
               </span>
             </div>
             <h3 className="m-0 mb-3.5 text-[21px] font-bold tracking-[-0.01em]">AI Voice Agent</h3>
-            <p className="m-0 mb-5 text-[14.5px] leading-[1.6] text-muted">
+            {/* No "hear it" CTA until there's a live demo line to point at. */}
+            <p className="m-0 text-[14.5px] leading-[1.6] text-muted">
               A natural-sounding voice picks up when you can&apos;t — takes the name, number, the
               job and how urgent it is, then books it or texts you the summary. Bolted onto
               Speed-to-Lead when the phone is where you&apos;re losing work.
             </p>
-            {/* TODO: swap to DEMO_PHONE once AI voice line is live */}
-            <div className="mt-auto border-t border-white/[0.07] pt-[18px]">
-              <span className="mb-1.5 block font-mono text-[10.5px] tracking-[0.12em] text-muted2">
-                WANT TO HEAR IT?
-              </span>
-              <a
-                href={`tel:${CONTACT_PHONE_TEL}`}
-                className="text-[15px] font-semibold text-[#B6A9FF] no-underline hover:underline"
-              >
-                Text or call me: {CONTACT_PHONE} →
-              </a>
-            </div>
           </Reveal>
         </div>
 
